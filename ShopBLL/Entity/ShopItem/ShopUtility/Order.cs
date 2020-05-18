@@ -9,6 +9,5 @@ namespace ShopBLL.Entity.Interface
         public int OrderId { get; set; }
         public DateTime Time { get; set; }
         public double Price { get; set; }
-
     }
 }

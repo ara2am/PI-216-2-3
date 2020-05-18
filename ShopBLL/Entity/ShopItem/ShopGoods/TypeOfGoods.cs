@@ -9,6 +9,7 @@ namespace ShopBLL.Entity.ShopItem.ShopGoods
         public int TypeOfGoodsId { get; set; }
         public string Name { get; set; }
         public int AgeLimit { get; set; }
+        public bool NeedPermission { get; set; }
 
     }
 }

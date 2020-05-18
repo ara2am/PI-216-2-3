@@ -11,6 +11,11 @@ namespace ShopBLL.Entity.ShopItem.ShopGoods
         public string Description { get; set; }
         public double Price { get; set; }
         public TypeOfGoods Type { get; set; }
+        public List<ShopOrder> ListOfOrders { get; set; }
 
+        public Goods()
+        {
+            ListOfOrders = new List<ShopOrder>();
+        }
     }
 }

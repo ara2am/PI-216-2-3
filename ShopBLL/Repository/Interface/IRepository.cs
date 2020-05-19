@@ -9,7 +9,7 @@ namespace ShopBLL.Repository.Interface
         IEnumerable<T> GetAll();
         T Get(int Id);
         void Add(T obj);
-        void Update(T obj);
         void Del(int Id);
+        void Update(T obj);
     }
 }

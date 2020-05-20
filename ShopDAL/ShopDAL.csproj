@@ -57,6 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\GoodsConfig.cs" />
+    <Compile Include="Config\ShopOrderConfig.cs" />
+    <Compile Include="Config\TypeOfGoodsConfig.cs" />
     <Compile Include="Context\ContextClasses\ShopContext.cs" />
     <Compile Include="Context\Interface\IShopContext.cs" />
     <Compile Include="Entity\ShopItem\ShopEnums\ShopEnum.cs" />
@@ -65,6 +68,10 @@
     <Compile Include="Entity\ShopUtility\Order.cs" />
     <Compile Include="Entity\ShopUtility\ShopOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Interface\IGoodsRepository.cs" />
+    <Compile Include="Repository\Interface\IRepository.cs" />
+    <Compile Include="Repository\Interface\IShopOrderRepository.cs" />
+    <Compile Include="Repository\Interface\ITypeOfGoods.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -73,7 +80,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Repository\RepositoryEntity\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

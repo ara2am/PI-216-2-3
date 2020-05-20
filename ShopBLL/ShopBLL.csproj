@@ -51,7 +51,6 @@
     <Compile Include="Entity\ShopItem\ShopGoods\Goods.cs" />
     <Compile Include="Services\ServicesEntity\GoodsServices.cs" />
     <Compile Include="Services\Interface\IGoodsServices.cs" />
-    <Compile Include="Repository\Interface\IRepository.cs" />
     <Compile Include="Services\Interface\IShopOrder.cs" />
     <Compile Include="AutoMapper\Mapper.cs" />
     <Compile Include="Entity\ShopItem\ShopUtility\Order.cs" />
@@ -62,7 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entity\User\TypeOfUser\" />
-    <Folder Include="Repository\RepositoryEntity\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

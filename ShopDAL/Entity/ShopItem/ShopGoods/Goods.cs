@@ -2,14 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopDAL.Entity.ShopItem.ShopEnums
+namespace ShopDAL.Entity.ShopItem.ShopGoods
 {
-    class Goods
+    [Table("Goods")]
+    public class Goods
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int GoodsId { get; set; }
 
         [Required]
@@ -23,8 +27,10 @@ namespace ShopDAL.Entity.ShopItem.ShopEnums
         [Required]
         [Range(double.Epsilon, double.MaxValue, ErrorMessage = "Must be positive value")]
         public double Price { get; set; }
+
+        [ForeignKey("TypeOfGoods")]
         public TypeOfGoods Type { get; set; }
-        public List<ShopOrder> ListOfOrders { get; set; }
+        public ICollection<ShopOrder> ListOfOrders { get; set; }
 
         public Goods()
         {

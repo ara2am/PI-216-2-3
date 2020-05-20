@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopDAL.Entity.ShopItem.ShopEnums
+namespace ShopDAL.Entity.ShopItem.ShopGoods
 {
-    class TypeOfGoods
+    [Table("TypeOfGoods")]
+    public class TypeOfGoods
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int TypeOfGoodsId { get; set; }
 
         [Required]

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace ShopDAL.Context.Interface
 {
-    interface IShopContext
+    public interface IShopContext
     {
+        int SaveChanges();
+        void Dispose();
     }
 }

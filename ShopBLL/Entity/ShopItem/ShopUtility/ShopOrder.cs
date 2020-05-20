@@ -6,7 +6,7 @@ using ShopBLL.Entity.ShopItem.ShopUtility.ShopEnums;
 
 namespace ShopBLL.Entity.ShopItem.ShopGoods
 {
-    class ShopOrder : Order
+    public class ShopOrder : Order
     {
         public override int OrderId { get; set; }
         public override DateTime Time { get; set; }

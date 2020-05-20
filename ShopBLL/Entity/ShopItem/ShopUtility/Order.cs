@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShopBLL.Entity.Interface
 {
-    abstract class Order
+    public abstract class Order
     {
         abstract public int OrderId { get; set; }
         abstract public DateTime Time { get; set; }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ShopBLL.Entity.ShopItem.ShopGoods
 {
-    class TypeOfGoods
+    public class TypeOfGoods
     {
         public int TypeOfGoodsId { get; set; }
         public string Name { get; set; }

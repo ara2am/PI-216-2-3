@@ -23,7 +23,7 @@ namespace ShopDAL.Entity.ShopUtility
         public override double Price { get; set; }
         public ShopOrderDeliveryState DeliveryState { get; set; }
         public ShopOrderPaymentState PaymentState { get; set; }
-        public List<Goods> ListOfGoods { get; set; }
+        public ICollection<Goods> ListOfGoods { get; set; }
         public ShopOrder()
         {
             ListOfGoods = new List<Goods>();

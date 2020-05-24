@@ -71,7 +71,11 @@
     <Compile Include="Repository\Interface\IGoodsRepository.cs" />
     <Compile Include="Repository\Interface\IRepository.cs" />
     <Compile Include="Repository\Interface\IShopOrderRepository.cs" />
-    <Compile Include="Repository\Interface\ITypeOfGoods.cs" />
+    <Compile Include="Repository\Interface\ITypeOfGoodsRepository.cs" />
+    <Compile Include="Repository\RepositoryEntity\GoodsRepository.cs" />
+    <Compile Include="Repository\RepositoryEntity\Repository.cs" />
+    <Compile Include="Repository\RepositoryEntity\ShopOrderRepository.cs" />
+    <Compile Include="Repository\RepositoryEntity\TypeOfGoodsRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -80,9 +84,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repository\RepositoryEntity\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

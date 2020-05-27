@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dependencies\BLLModule.cs" />
     <Compile Include="Entity\ShopItem\ShopGoods\Goods.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Services\ActionResult.cs" />

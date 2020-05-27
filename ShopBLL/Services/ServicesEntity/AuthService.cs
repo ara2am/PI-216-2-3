@@ -17,7 +17,7 @@ namespace ShopBLL.Services.ServicesEntity
 
         public ActionResult Register (User user)
         {
-            
+            return null;
         }
 
         public ClaimsIdentity Login (User user)
@@ -27,7 +27,7 @@ namespace ShopBLL.Services.ServicesEntity
 
         public void Dispose ()
         {
-            throw new NotImplementedException ();
+            //throw new NotImplementedException ();
         }
     }
 }

@@ -2,16 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+using System.Web.Http;
+using ShopWebAPI.Models.Goods;
+using ShopBLL.Services.Interface;
 
 namespace ShopWebAPI.Controllers
 {
-    public class GoodsController : Controller
+    public class GoodsController : ApiController
     {
-        // GET: Goods
-        public ActionResult Index()
+        [HttpPost]
+        [Route ("api/Goods/Add")]
+        public IHttpActionResult Add ([FromBody]AddModel model)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                
+                return Ok ("");
+            }
+            return BadRequest ();
+        }
+
+        [HttpGet]
+        [Route ("api/Goods/Remove")]
+        public IHttpActionResult Remove ([FromUri]RemoveModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                return Ok ("");
+            }
+            return BadRequest ();
         }
     }
 }

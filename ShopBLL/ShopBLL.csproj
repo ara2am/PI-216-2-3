@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="Entity\ShopItem\ShopGoods\Goods.cs" />
     <Compile Include="Entity\User.cs" />
+    <Compile Include="Services\ActionResult.cs" />
     <Compile Include="Services\Interface\IAuthService.cs" />
     <Compile Include="Services\ServicesEntity\AuthService.cs" />
     <Compile Include="Services\ServicesEntity\GoodsServices.cs" />
@@ -98,7 +99,12 @@
     <Compile Include="Entity\ShopItem\ShopUtility\ShopOrder.cs" />
     <Compile Include="Entity\ShopItem\ShopGoods\TypeOfGoods.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ShopDAL\ShopDAL.csproj">
+      <Project>{e1e5476e-4e87-44fe-8141-0d116ae88306}</Project>
+      <Name>ShopDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

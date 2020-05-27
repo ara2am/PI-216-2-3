@@ -84,8 +84,12 @@
     <Compile Include="Config\GoodsConfig.cs" />
     <Compile Include="Config\ShopOrderConfig.cs" />
     <Compile Include="Config\TypeOfGoodsConfig.cs" />
+    <Compile Include="Config\UserConfig.cs" />
     <Compile Include="Context\ContextClasses\ShopContext.cs" />
+    <Compile Include="Context\ContextClasses\UserContext.cs" />
+    <Compile Include="Context\Interface\IContext.cs" />
     <Compile Include="Context\Interface\IShopContext.cs" />
+    <Compile Include="Context\Interface\IUserContext.cs" />
     <Compile Include="Entity\ShopItem\ShopEnums\ShopEnum.cs" />
     <Compile Include="Entity\ShopItem\ShopGoods\Goods.cs" />
     <Compile Include="Entity\ShopItem\ShopGoods\TypeOfGoods.cs" />

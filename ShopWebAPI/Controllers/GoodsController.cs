@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace ShopWebAPI.Controllers
 {
-    public class HomeController : Controller
+    public class GoodsController : Controller
     {
+        // GET: Goods
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
-
             return View();
         }
     }

@@ -10,7 +10,7 @@ namespace ShopBLL.Services.ServicesEntity
 {
     public class GoodsServices : Service<Goods>
     {
-        public GoodsServices(string connection)
+        public GoodsServices(string connection = "DbShopConnection")
             : base(connection)
         {
 

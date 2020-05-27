@@ -16,6 +16,7 @@ namespace ShopDAL.Repository
         public IGoodsRepository goods { get; private set; }
         public IShopOrderRepository orders { get; private set; }
         public ITypeOfGoodsRepository types { get; private set; }
+        public IUserRepository users { get; private set; }
 
 
         public UnitOfWork(ShopContext _context)
@@ -24,6 +25,7 @@ namespace ShopDAL.Repository
             goods = new GoodsRepository(context);
             orders = new ShopOrderRepository(context);
             types = new TypeOfGoodsRepository(context);
+            users = new UserRepository(context);
         }
 
         public int Complete()

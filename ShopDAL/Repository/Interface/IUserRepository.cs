@@ -1,6 +1,5 @@
 ﻿using ShopBLL.Repository.Interface;
-using ShopDAL.Entity.ShopItem.ShopGoods;
-using ShopDAL.Entity.ShopUtility;
+using ShopDAL.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace ShopDAL.Repository.Interface
 {
-    public interface IShopOrderRepository : IRepository<ShopOrder>
+    public interface IUserRepository : IRepository<User>
     {
-        IEnumerable<Goods> GetGoods(int id);
+
     }
 }

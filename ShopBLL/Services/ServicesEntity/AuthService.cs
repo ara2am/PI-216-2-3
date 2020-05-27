@@ -11,9 +11,14 @@ using ShopDAL.Context.ContextClasses;
 
 namespace ShopBLL.Services.ServicesEntity
 {
-    public class AuthService : IAuthService
+    public class AuthService : Service<User>,IAuthService
     {
-        IUserContext context = new UserContext ();
+        public AuthService(string connection = "DbShopConnection")
+          : base(connection)
+        {
+
+        }
+
 
         public ActionResult Register (User user)
         {
@@ -25,9 +30,34 @@ namespace ShopBLL.Services.ServicesEntity
             throw new NotImplementedException ();
         }
 
-        public void Dispose ()
+     
+        public override void Add(User obj)
         {
-            //throw new NotImplementedException ();
+            Unit.users.Add(mapper.Map<User, ShopDAL.Entity.User>(obj));
+            Unit.Complete();
         }
+
+        public override void Del(User obj)
+        {
+            Unit.users.Del(mapper.Map<User, ShopDAL.Entity.User>(obj));
+            Unit.Complete();
+        }
+
+        public override User Get(int id)
+        {
+            return mapper.Map<User>(Unit.users.Get(id));
+        }
+
+        public override ICollection<User> GetAll()
+        {
+            return mapper.Map<ICollection<User>>(Unit.users.GetAll());
+        }
+
+        public override void Update(int id, User obj)
+        {
+            Unit.types.Update(id, mapper.Map<User, ShopDAL.Entity.ShopItem.ShopGoods.TypeOfGoods>(obj));
+            Unit.Complete();
+        }
+
     }
 }

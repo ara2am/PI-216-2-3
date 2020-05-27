@@ -26,7 +26,7 @@ namespace ShopWebAPI.App_Start
 
         public IAuthService CreateAuthService ()
         {
-            return new AuthService ();
+            return new AuthService ("DbShopConnection");
         }
     }
 }

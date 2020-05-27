@@ -84,21 +84,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoMapper\Mapper.cs" />
     <Compile Include="Dependencies\BLLModule.cs" />
     <Compile Include="Entity\ShopItem\ShopGoods\Goods.cs" />
     <Compile Include="Entity\User.cs" />
     <Compile Include="Services\ActionResult.cs" />
     <Compile Include="Services\Interface\IAuthService.cs" />
+    <Compile Include="Services\Interface\IService.cs" />
     <Compile Include="Services\ServicesEntity\AuthService.cs" />
     <Compile Include="Services\ServicesEntity\GoodsServices.cs" />
     <Compile Include="Services\Interface\IGoodsServices.cs" />
     <Compile Include="Services\Interface\IShopOrder.cs" />
-    <Compile Include="AutoMapper\Mapper.cs" />
     <Compile Include="Entity\ShopItem\ShopUtility\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entity\ShopItem\ShopUtility\ShopEnums\ShopEnum.cs" />
     <Compile Include="Entity\ShopItem\ShopUtility\ShopOrder.cs" />
     <Compile Include="Entity\ShopItem\ShopGoods\TypeOfGoods.cs" />
+    <Compile Include="Services\ServicesEntity\Service.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShopDAL\ShopDAL.csproj">
@@ -110,5 +112,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

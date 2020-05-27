@@ -16,7 +16,7 @@ namespace ShopBLL.Dependencies
         public override void Load ()
         {
             Bind<IAuthService> ().ToConstructor (x => new AuthService ());
-            Bind<IGoodsServices> ().ToConstructor (x => new GoodsServices ());
+            //Bind<IGoodsServices>().ToConstructor(x => new GoodsServices());
         }
     }
 }

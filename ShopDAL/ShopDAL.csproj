@@ -88,6 +88,7 @@
     <Compile Include="Config\ShopOrderConfig.cs" />
     <Compile Include="Config\TypeOfGoodsConfig.cs" />
     <Compile Include="Config\UserConfig.cs" />
+    <Compile Include="Context\ContextClasses\Initializer.cs" />
     <Compile Include="Context\ContextClasses\ShopContext.cs" />
     <Compile Include="Context\ContextClasses\UserContext.cs" />
     <Compile Include="Context\Interface\IContext.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Repository\RepositoryEntity\Repository.cs" />
     <Compile Include="Repository\RepositoryEntity\ShopOrderRepository.cs" />
     <Compile Include="Repository\RepositoryEntity\TypeOfGoodsRepository.cs" />
+    <Compile Include="Repository\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -3,8 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using ShopBLL.Entity.ShopItem.ShopUtility.ShopEnums;
+using ShopBLL.Entity.ShopItem.ShopGoods;
 
-namespace ShopBLL.Entity.ShopItem.ShopGoods
+namespace ShopBLL.Entity.ShopItem.ShopUtility
 {
     public class ShopOrder : Order
     {

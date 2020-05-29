@@ -21,5 +21,10 @@ namespace ShopDAL.Repository.RepositoryEntity
         {
             get { return Context as ShopContext; }
         }
+
+        public User GetUser (int id)
+        {
+            return Get (id);
+        }
     }
 }

@@ -196,7 +196,6 @@
     <Compile Include="Controllers\GoodsController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\StatisticController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\GoodsTypeController.cs" />
     <Compile Include="Dependencies\NinjectResolver.cs" />
     <Compile Include="Dependencies\NinjectScope.cs" />

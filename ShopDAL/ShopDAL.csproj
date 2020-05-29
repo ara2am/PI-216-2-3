@@ -106,10 +106,12 @@
     <Compile Include="Repository\Interface\IRepository.cs" />
     <Compile Include="Repository\Interface\IShopOrderRepository.cs" />
     <Compile Include="Repository\Interface\ITypeOfGoodsRepository.cs" />
+    <Compile Include="Repository\Interface\IUserRepository.cs" />
     <Compile Include="Repository\RepositoryEntity\GoodsRepository.cs" />
     <Compile Include="Repository\RepositoryEntity\Repository.cs" />
     <Compile Include="Repository\RepositoryEntity\ShopOrderRepository.cs" />
     <Compile Include="Repository\RepositoryEntity\TypeOfGoodsRepository.cs" />
+    <Compile Include="Repository\RepositoryEntity\UserRepository.cs" />
     <Compile Include="Repository\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>

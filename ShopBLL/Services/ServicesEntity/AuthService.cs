@@ -13,7 +13,7 @@ namespace ShopBLL.Services.ServicesEntity
 {
     public class AuthService : Service<User>,IAuthService
     {
-        public AuthService(string connection = "DbShopConnection")
+        public AuthService(string connection = "DbUserConnection")
           : base(connection)
         {
 
@@ -22,14 +22,20 @@ namespace ShopBLL.Services.ServicesEntity
 
         public ActionResult Register (User user)
         {
-            return null;
+            if (Get (user.Id) != null)
+            {
+                return new ActionResult (false, "User з id " + user.Id + " вже існує!");
+            }
+
+            Add (user);
+
+            return new ActionResult (true, "Користувач успішно створений");
         }
 
         public ClaimsIdentity Login (User user)
         {
-            throw new NotImplementedException ();
+            return UserManager.CreateIdentity (user, AuthenticationTypes.ApplicationCookie);
         }
-
      
         public override void Add(User obj)
         {

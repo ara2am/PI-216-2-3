@@ -10,6 +10,6 @@ namespace ShopDAL.Repository.Interface
 {
     public interface IUserRepository : IRepository<User>
     {
-
+        User GetUser (int id);
     }
 }

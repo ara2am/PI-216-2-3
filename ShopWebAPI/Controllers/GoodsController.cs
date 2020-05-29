@@ -8,6 +8,7 @@ using ShopBLL.Services.Interface;
 using ShopBLL.Services.ServicesEntity;
 using ShopBLL.Entity.ShopItem.ShopGoods;
 using AutoMapper;
+using ShopBLL.Entity.ShopItem.ShopUtility.ShopEnums;
 
 namespace ShopWebAPI.Controllers
 {
@@ -73,6 +74,45 @@ namespace ShopWebAPI.Controllers
             var _goods = mapper.Map<IEnumerable<Goods>> (goods);
 
             return Ok (_goods);
+        }
+
+        [HttpGet]
+        [Route ("api/Goods/Search/{sortCriteria}")]
+        public IHttpActionResult SortBy (SortCriteria sortCriteria)
+        {
+            var criteria = mapper.Map<SortCriteria> (sortCriteria);
+            var sorted_goods = mapper.Map<IEnumerable<Goods>> (services.SortBy (criteria));
+
+            if (sorted_goods.Count () == 0)
+                return BadRequest ();
+
+            return Ok (sorted_goods);
+        }
+
+        [HttpGet]
+        [Route ("api/Goods/SortByDescending/{sortCriteria}")]
+        public IHttpActionResult SortByDescending (SortCriteria sortCriteria)
+        {
+            var criteria = mapper.Map<SortCriteria> (sortCriteria);
+            var sorted_goods = mapper.Map<IEnumerable<Goods>> (services.SortByDescending (criteria));
+
+            if (sorted_goods.Count () == 0)
+                return BadRequest ();
+
+            return Ok (sorted_goods);
+        }
+
+        [HttpGet]
+        [Route ("api/Goods/filterCategory/{id}")]
+        public IHttpActionResult FilterByCategory (int id)
+        {
+            var goods = services.FilterByCategory (id);
+            var filter_goods = mapper.Map<IEnumerable<Goods>> (goods);
+
+            if (filter_goods.Count () == 0)
+                return BadRequest ();
+
+            return Ok (filter_goods);
         }
     }
 }

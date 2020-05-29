@@ -25,23 +25,21 @@ namespace ShopWebAPI.Controllers
 
         [HttpPost]
         [Route ("api/Goods/Add")]
+        [Authorize (Roles = "admin")]
         public IHttpActionResult Add ([FromBody]AddModel model)
         {
             if (ModelState.IsValid)
             {
                 var _goods = mapper.Map<Goods> (model);
-                bool result = services.Add (_goods);
-
-                if (result)
-                    return Ok ();
+                services.Add (_goods);
+                return Ok ();
             } else
                 return BadRequest (ModelState);
-
-            return BadRequest ();
         }
 
         [HttpGet]
         [Route ("api/Goods/Remove/{id}")]
+        [Authorize (Roles = "admin")]
         public IHttpActionResult Remove (int id)
         {
             services.Del (services.Get (id));

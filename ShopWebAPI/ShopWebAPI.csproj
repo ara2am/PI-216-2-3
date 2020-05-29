@@ -207,6 +207,7 @@
     </Compile>
     <Compile Include="Models\Auth\LoginModel.cs" />
     <Compile Include="Models\Auth\RegisterModel.cs" />
+    <Compile Include="Models\GoodsType\AddModel.cs" />
     <Compile Include="Models\Goods\AddModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

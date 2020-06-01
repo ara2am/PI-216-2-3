@@ -100,7 +100,9 @@
     <Compile Include="Entity\ShopItem\ShopUtility\ShopEnums\ShopEnum.cs" />
     <Compile Include="Entity\ShopItem\ShopUtility\ShopOrder.cs" />
     <Compile Include="Entity\ShopItem\ShopGoods\TypeOfGoods.cs" />
+    <Compile Include="Services\ServicesEntity\ShopOrderService.cs" />
     <Compile Include="Services\ServicesEntity\Service.cs" />
+    <Compile Include="Services\ServicesEntity\TypeOfGoodsService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShopDAL\ShopDAL.csproj">
@@ -110,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

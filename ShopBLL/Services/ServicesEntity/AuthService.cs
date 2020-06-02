@@ -34,7 +34,7 @@ namespace ShopBLL.Services.ServicesEntity
 
         public ClaimsIdentity Login (User user)
         {
-            return UserManager.CreateIdentity (user, AuthenticationTypes.ApplicationCookie);
+            return null;//UserManager.CreateIdentity (user, AuthenticationTypes.ApplicationCookie);
         }
      
         public override void Add(User obj)
